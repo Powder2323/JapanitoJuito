@@ -20,7 +20,6 @@ body{
 .poza-inceput{
     width: 100%;      /* lungimea pozei stanga-dreapta */
     height: 580px;    /* inaltimea imaginii */
-    image-rendering: auto;  /* randeaza imaginea fara sa arate pixelata / urata (poate sa lipseasca) */
 }
 
 #cuprins{
@@ -218,7 +217,6 @@ body{
     }
     img{
         width: 100%;
-        height: auto;
-        image-rendering: auto;  
+        height: 100%;
     }
 }
