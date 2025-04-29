@@ -1,18 +1,21 @@
 *{  /* e pe tot site-ul */
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body{
-    background-color: #B3D9FF; /* culoarea background-ului */
+    background-color: #D1E8FF; /* culoarea background-ului */
     color: #333333;  /* culoarea scrisului */
 }
 
 #inceput {
-    background-color: #D1E8FF /* culoare background doar pe o sectiune */
+    background-color: #B3D9FF; /* culoare background doar pe o sectiune */
 }
 
 .inceput{
+    border: 10px solid rgb(102, 183, 249);
+    margin-top: 50px;
     text-align: center;  /*textul este aliniat in centru */
     font-size: 40px;   /* dimensiunea fontului */
 }
@@ -22,32 +25,47 @@ body{
     height: 580px;    /* inaltimea imaginii */
 }
 
-#cuprins{
-    margin-top: 40px;
-    margin-left: 60px;
-    margin-bottom: 30px;
-    h1{   /* doar <h1> */
-        font-size: 70px;
-        margin-bottom: 10px;
-    }
-    li{  /* doar listele <li> */
-        font-size: 30px;
-        padding: 3px;
-        color: #3c41e6;
-    }
-    a{
-        color:#3c41e6;
-    }
-    a:hover{ /* cand este cursor-ul pe hyperlink */
-        color: red;
-    }
-    a:active{  /* cand am dat click pe hyperlink */
-        color: green;
-    }
+#baranavigare{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #72caf3;
+    padding: 5px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#baranavigare button{
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(43, 78, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#baranavigare button:hover{
+    background-color: rgb(34, 0, 255);
+}
+
+#baranavigare button:active{
+    background-color: rgb(0, 255, 153);
+}
+
+.sectiune{
+    scroll-margin-top: 50px; /* da scroll mai jos pentru a nu acoperi titlul sau ce este important in sectiune */
+}
+
+.sectiunef{
+    scroll-margin-top: -300px;
 }
 
 #introducere{
-    margin-top: 5px;
+    margin-top: 100px;
+    border: 25px solid rgb(102, 183, 249);
+    background-color: #B3D9FF;
     h1{
         font-size: 70px;
         margin-bottom: 15px;
@@ -64,13 +82,15 @@ body{
         margin-bottom: 40px;
     }
     iframe{
-        margin-left: 30%;
-        margin-top: 10px;
-        margin-bottom: 50px;
+        margin-left: 25%;
+        margin-top: 100px;
+        margin-bottom: 150px;
     }
 }
 
 #geografie{
+    border: 25px solid rgb(102, 183, 249);
+    background-color: #B3D9FF;
     margin-top: 50px;
     h1{
         font-size: 70px;
@@ -90,7 +110,101 @@ body{
 }
 
 #turism{
-    margin-top: 60px;
+    border: 25px solid rgb(102, 183, 249);
+    background-color: #B3D9FF;
+    margin-top: 150px;
+    h1{
+        font-size: 80px;
+        margin-left: 100px;
+        margin-bottom: 30px;
+    }
+    p{
+        margin-left: 25px;
+        text-indent: 30px;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    li{
+        margin-left: 100px;
+        font-size: 30px;
+    }
+    h2{
+        margin-left: 150px;
+        margin-top: 50px;
+        font-size: 50px;
+    }
+    img{
+        margin-top: 40px;
+        margin-left: 50px;
+    }
+}
+
+#cultura{
+    border: 25px solid rgb(102, 183, 249);
+    background-color: #B3D9FF;
+    margin-top: 100px;
+    h1{
+        font-size: 70px;
+        margin-left: 100px;
+        margin-bottom: 25px;
+    }
+    p{
+        margin-left: 15px;
+        text-indent: 30px;
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+    li{
+        margin-left: 70px;
+        font-size: 35px;
+    }
+    h2{
+        margin-left: 100px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        font-size: 70px;
+    }
+    img{
+        margin-left: 225px;
+        margin-top: 40px;
+    }
+}
+
+#gastronomie{
+    border: 25px solid rgb(102, 183, 249);
+    background-color: #B3D9FF;
+    margin-top: 100px;
+    h1{
+        font-size: 70px;
+        margin-left: 100px;
+        margin-bottom: 15px;
+    }
+    p{
+        margin-left: 15px;
+        text-indent: 30px;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    li{
+        margin-left: 70px;
+        font-size: 35px;
+    }
+    h2{
+        margin-left: 100px;
+        margin-top: 50px;
+        font-size: 70px;
+    }
+    img{
+        margin-top: 40px;
+        margin-left: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+#concluzie{
+    border: 25px solid rgb(102, 183, 249);
+    background-color: #B3D9FF;
+    margin-top: 300px;
     h1{
         font-size: 70px;
         margin-left: 100px;
@@ -102,95 +216,12 @@ body{
         font-size: 30px;
         margin-bottom: 20px;
     }
-    li{
-        margin-left: 70px;
-        font-size: 25px;
-    }
-    h2{
-        margin-left: 100px;
-        margin-top: 50px;
-        font-size: 40px;
-    }
-    img{
-        margin-top: 40px;
-        margin-left: 50px;
-    }
-}
-
-#cultura{
-    margin-top: 100px;
-    h1{
-        font-size: 70px;
-        margin-left: 100px;
-        margin-bottom: 25px;
-    }
-    p{
-        margin-left: 15px;
-        text-indent: 30px;
-        font-size: 35px;
-        margin-bottom: 20px;
-    }
-    li{
-        margin-left: 70px;
-        font-size: 25px;
-    }
-    h2{
-        margin-left: 100px;
-        margin-top: 50px;
-        margin-bottom: 20px;
-        font-size: 40px;
-    }
-    img{
-        margin-left: 225px;
-        margin-top: 40px;
-    }
-}
-
-#gastronomie{
-    margin-top: 100px;
-    h1{
-        font-size: 70px;
-        margin-left: 100px;
-        margin-bottom: 15px;
-    }
-    p{
-        margin-left: 15px;
-        text-indent: 30px;
-        font-size: 25px;
-        margin-bottom: 20px;
-    }
-    li{
-        margin-left: 70px;
-        font-size: 25px;
-    }
-    h2{
-        margin-left: 100px;
-        margin-top: 50px;
-        font-size: 40px;
-    }
-    img{
-        margin-top: 40px;
-        margin-left: 50px;
-    }
-}
-
-#concluzie{
-    margin-top: 10px;
-    h1{
-        font-size: 70px;
-        margin-left: 100px;
-        margin-bottom: 15px;
-    }
-    p{
-        margin-left: 15px;
-        text-indent: 30px;
-        font-size: 25px;
-        margin-bottom: 20px;
-    }
 }
 
 #surse{
-    margin-top: 10px;
+    border: 25px solid rgb(102, 183, 249);
+    background-color: #B3D9FF;
+    margin-top: 600px;
     h1{
         font-size: 60px;
         margin-left: 100px;
@@ -210,6 +241,8 @@ body{
 }
 
 .final{
+    border: 25px solid rgb(102, 183, 249);
+    background-color: #B3D9FF;
     margin-top: 50px;
     p{
         margin-left: 30px;
